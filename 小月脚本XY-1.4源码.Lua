@@ -1024,7 +1024,7 @@ end
 })
 
 Tab:AddButton({
-	Name = "Among us（逆天）",
+	Name = "Among us（逆天会死）",
 	Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/f1LTmTPZ"))()
 end
