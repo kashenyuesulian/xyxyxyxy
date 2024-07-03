@@ -13,7 +13,7 @@ print("反挂机")
 		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
 local OrionLib = loadstring(game:HttpGet('https://pastebin.com/raw/SePpsSPZ'))()
-local Window = OrionLib:MakeWindow({Name = "小月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "迷你世界拆    ", ConfigFolder = "苏暗决 穆又凌都给我低调点"})
+local Window = OrionLib:MakeWindow({Name = "小月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "迷你世界一字拆    ", ConfigFolder = "苏暗决 穆又凌都给我低调点"})
 local about = Window:MakeTab({
     Name = "信息-XL",
     Icon = "rbxassetid://4483345998",
