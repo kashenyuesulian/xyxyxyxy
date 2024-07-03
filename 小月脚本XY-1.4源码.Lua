@@ -1,4 +1,4 @@
-local CoreGui = game:GetService("StarterGui")
+9local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
     Title = "小月脚本XY-1.4",
@@ -1129,7 +1129,7 @@ Tab:AddButton({
 	Callback = function()
 end
 })
-Tab:AddParagraph("制作：小月")
+Tab:AddParagraph("傻逼hub为什么不给我loadstring😡")
 Tab:AddParagraph("第五人格！")
 Tab:AddParagraph("拆")
 Tab:AddParagraph("拆家军")
