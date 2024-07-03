@@ -1129,14 +1129,14 @@ Tab:AddButton({
 	Callback = function()
 end
 })
-Tab:AddParagraph("制作：小凌")
-Tab:AddParagraph("该脚本云端更新！")
-Tab:AddParagraph("谢谢群里的《你猜 喵~》帮我测试")
-Tab:AddParagraph("《一根葱是一个furry!!!》")
-Tab:AddParagraph("UI:Krx群")
-Tab:AddParagraph("缝合大佬小凌")
-Tab:AddParagraph("QB脚本作者对不起我不该骂你！！！")
-Tab:AddParagraph("退休对不起我不该开源的")
+Tab:AddParagraph("制作：小月")
+Tab:AddParagraph("第五人格！")
+Tab:AddParagraph("拆")
+Tab:AddParagraph("拆家军")
+Tab:AddParagraph("bro")
+Tab:AddParagraph("🥵🥵🥵🥵🥵🥵🥵")
+Tab:AddParagraph("🥵🥵🥵🥵🥵🥵🥵")
+Tab:AddParagraph("🥵🥵🥵🥵🥵🥵🥵")
 Tab:AddButton({
 	Name = "小凌",
 	Callback = function()
