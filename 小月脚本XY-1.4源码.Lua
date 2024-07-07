@@ -678,7 +678,7 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
-	Name = "后室",
+	Name = "Backrooms",
 	Callback = function()
      loadstring(game:HttpGet('https://pastebin.com/raw/Gsqd40fL'))()
   	end    
