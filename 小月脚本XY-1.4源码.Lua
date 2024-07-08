@@ -20,7 +20,7 @@ local about = Window:MakeTab({
     PremiumOnly = false
 })
 
-Tab:AddParagraph("脚本在最后面懂不懂？")
+Tab:AddParagraph("脚本在最后面懂不懂，不懂你妈死了")
 about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 about:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
