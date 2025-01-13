@@ -12,8 +12,8 @@ print("反挂机")
 		   wait(1)
 		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
-local OrionLib = loadstring(game:HttpGet('https://
-local Window = OrionLib:MakeWindow({Name = "小月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "迷你世界一字拆    ", ConfigFolder = "苏暗决 穆又凌都给我低调点"})
+local OrionLib = loadstring(game:HttpGet('https://Fuck you
+local Window = OrionLib:MakeWindow({Name = "小月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "操你妈    ", ConfigFolder = "操你妈"})
 local about = Window:MakeTab({
     Name = "信息-XL",
     Icon = "rbxassetid://4483345998",
@@ -1129,10 +1129,10 @@ Tab:AddButton({
 	Callback = function()
 end
 })
-Tab:AddParagraph("傻逼hub为什么不给我loadstring😡")
-Tab:AddParagraph("第五人格！")
-Tab:AddParagraph("拆")
-Tab:AddParagraph("拆家军")
+Tab:AddParagraph("")
+Tab:AddParagraph("！")
+Tab:AddParagraph("")
+Tab:AddParagraph("")
 Tab:AddParagraph("bro")
 Tab:AddParagraph("🥵🥵🥵🥵🥵🥵🥵")
 Tab:AddParagraph("🥵🥵🥵🥵🥵🥵🥵")
@@ -1291,6 +1291,6 @@ Tab:AddButton({
     loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
   end
 })
-Tab:AddParagraph("穆又凌为什么天天玩死人俄亥俄州)")
-Tab:AddParagraph("星空强健饭")
-Tab:AddParagraph("苏暗决为什么不开挂🤔")
+Tab:AddParagraph("你配看吗，你是死全家了是吧")
+Tab:AddParagraph("")
+Tab:AddParagraph("")
