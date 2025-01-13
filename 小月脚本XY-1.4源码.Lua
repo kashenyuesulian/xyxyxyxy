@@ -13,7 +13,7 @@ print("反挂机")
 		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
 local OrionLib = loadstring(game:HttpGet('https://Fuck you
-local Window = OrionLib:MakeWindow({Name = "小月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "操你妈    ", ConfigFolder = "操你妈"})
+local Window = OrionLib:MakeWindow({Name = "明月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "操你妈    ", ConfigFolder = "操你妈"})
 local about = Window:MakeTab({
     Name = "信息-XL",
     Icon = "rbxassetid://4483345998",
