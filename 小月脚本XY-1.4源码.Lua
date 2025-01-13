@@ -1,7 +1,7 @@
 9local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
-    Title = "小月脚本XY-1.4",
+    Title = "明月脚本XY-1.4",
     Text = "加载....已开启反挂机",
     Duration = 5, 
 })
@@ -12,7 +12,7 @@ print("反挂机")
 		   wait(1)
 		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
-local OrionLib = loadstring(game:HttpGet('https://pastebin.com/raw/SePpsSPZ'))()
+local OrionLib = loadstring(game:HttpGet('https://
 local Window = OrionLib:MakeWindow({Name = "小月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "迷你世界一字拆    ", ConfigFolder = "苏暗决 穆又凌都给我低调点"})
 local about = Window:MakeTab({
     Name = "信息-XL",
