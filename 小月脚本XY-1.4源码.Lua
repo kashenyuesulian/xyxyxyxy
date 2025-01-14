@@ -1,102 +1,42 @@
-9local CoreGui = game:GetService("StarterGui")
-
-CoreGui:SetCore("SendNotification", {
-    Title = "明月脚本XY-1.4",
-    Text = "加载....已开启反挂机",
-    Duration = 5, 
+loadsuc, OrionLib = pcall(function()
+    return loadstring(game:HttpGet('https://raw.githubusercontent.com/C-Feng-dev/Orion/refs/heads/main/main.lua'))()
+end)
+if loadsuc ~= true then
+    warn("OrionLib加载错误,原因:" .. OrionLib)
+    return
+end
+OrionLib:MakeNotification({
+    Name = "加载中...",
+    Content = "可能会有短暂卡顿",
+    Image = "rbxassetid://4483345998",
+    Time = 4
 })
-print("反挂机")
-		local vu = game:GetService("VirtualUser")
-		game:GetService("Players").LocalPlayer.Idled:connect(function()
-		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		   wait(1)
-		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		end)
-local OrionLib = loadstring(game:HttpGet("https://github.com/kashenyuesulian/xyxyxyxy/blob/main/%E5%B0%8F%E6%9C%88%E8%84%9A%E6%9C%ACXY-1.4%E6%BA%90%E7%A0%81.Lua"))()
-local Window = OrionLib:MakeWindow({Name = "明月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "操你妈    ", ConfigFolder = "操你妈"})
-local about = Window:MakeTab({
-    Name = "信息-XL",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-Tab:AddParagraph("脚本在最后面懂不懂，不懂你妈死了")
-about:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
-about:AddParagraph("您的注入器:"," "..identifyexecutor().."")
-about:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
+local Window = OrionLib:MakeWindow({Name = "明月外挂中心-1.4", HidePremium = false, SaveConfig = false,IntroText = "明月-v1.4",})
 local Tab = Window:MakeTab({
   Name = "通用-XL",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
-  })
-  
+})
+Tab:AddLabel("推荐配合IY使用")
+Tab:AddButton({
+	Name = "IY",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end
+})
  Tab:AddButton({
 	Name = "L1S(落叶中心)",
 	Callback = function()
-getgenv().LS="落叶中心"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/krlpl/Deciduous-center-LS/main/%E8%90%BD%E5%8F%B6%E4%B8%AD%E5%BF%83%E6%B7%B7%E6%B7%86.txt"))()
-end
+		getgenv().LS="落叶中心"
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/krlpl/Deciduous-center-LS/main/%E8%90%BD%E5%8F%B6%E4%B8%AD%E5%BF%83%E6%B7%B7%E6%B7%86.txt"))()
+	end
 })
-
 Tab:AddButton({
 	Name = "飞行装备（可控制物体）",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/zaochuan2"))()		
   	end
 })
-
-Tab:AddTextbox({
-	Name = "移动速度",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-	end	 
-})
-
- Tab:AddTextbox({
-	Name = "跳跃高度",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-	end	 
-})
-
-Tab:AddTextbox({
-	Name = "最大血量",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.MaxHealth = Value
-	end	 
-})
-
-Tab:AddTextbox({
-	Name = "当前血量",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.Health = Value
-	end	 
-})
-
-Tab:AddButton({
-	Name = "回满血",
-	Callback = function()
-game.Players.LocalPlayer.Character.Humanoid.Health = game.Players.LocalPlayer.Character.Humanoid.MaxHealth 
-end
-})
-
-Tab:AddTextbox({
-	Name = "重力设置",
-	Default = "",
-	TextDisappear = true,
-	Callback = function(Value)
-		game.Workspace.Gravity = Value
-	end
-})
-
 Tab:AddButton({
 	Name = "Acrylix（通用）",
 	Callback = function()
@@ -110,26 +50,6 @@ Tab:AddButton({
 loadstring(game:HttpGet('https://pastebin.com/raw/JYFXjEVh'))()
 end
 })
-
-Tab:AddButton({
-	Name = "墙行走",
-	Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
-end
-})
-
-Tab:AddToggle({
-	Name = "夜视",
-	Default = false,
-	Callback = function(Value)
-		if Value then
-		    game.Lighting.Ambient = Color3.new(1, 1, 1)
-		else
-		    game.Lighting.Ambient = Color3.new(0, 0, 0)
-		end
-	end
-})
-
 Tab:AddButton({
 	Name = "通用ESP",
 	Callback = function()
@@ -143,34 +63,29 @@ Tab:AddButton({
      loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
   	end    
 })
-
-Tab:AddToggle({
-	Name = "穿墙",
-	Default = false,
-	Callback = function(Value)
-		if Value then
-		    Noclip = true
-		    Stepped = game.RunService.Stepped:Connect(function()
-			    if Noclip == true then
-				    for a, b in pairs(game.Workspace:GetChildren()) do
-                        if b.Name == game.Players.LocalPlayer.Name then
-                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
-                                if v:IsA("BasePart") then
-                                    v.CanCollide = false
-                                end
-                            end
-                        end
-                    end
-			    else
-				    Stepped:Disconnect()
-			    end
-		    end)
-	    else
-		    Noclip = false
-	    end
-	end
+Tab:AddToggle({ -- 高亮
+    Name = "高亮(低质量)",
+    Default = true,
+    Callback = function(Value)
+        Light = game:GetService("Lighting")
+        if Value then
+            FullBrightLite = true
+            task.spawn(function()
+                while FullBrightLite and OrionLib:IsRunning() do
+                    Light.Ambient = Color3.new(1, 1, 1)
+                    Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+                    Light.ColorShift_Top = Color3.new(1, 1, 1)
+                    task.wait()
+                end
+            end)
+        else
+            FullBrightLite = false
+            Light.Ambient = Color3.new(0, 0, 0)
+            Light.ColorShift_Bottom = Color3.new(0, 0, 0)
+            Light.ColorShift_Top = Color3.new(0, 0, 0)
+        end
+    end
 })
-
 Tab:AddButton({
 	Name = "甩飞别人",
 	Callback = function()
@@ -184,44 +99,12 @@ Tab:AddButton({
 loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
 end
 })
-
-Tab:AddButton({
-  Name = "稳定穿墙",
-  Callback = function()
-    local Workspace = game:GetService("Workspace")
-local Players = game:GetService("Players")
-local Clipon = true
-
-Stepped = game:GetService("RunService").Stepped:Connect(function()
-	if not Clipon == false then
-		for a, b in pairs(Workspace:GetChildren()) do
-        if b.Name == Players.LocalPlayer.Name then
-        for i, v in pairs(Workspace[Players.LocalPlayer.Name]:GetChildren()) do
-        if v:IsA("BasePart") then
-        v.CanCollide = false
-        end end end end
-	else
-		Stepped:Disconnect()
-	end
-end)
-  end
-})
-
-Tab:AddButton({
-    Name="我要紫砂",
-    Callback=function()
-        game.Players.LocalPlayer.Character.Humanoid.Health=0
-HumanDied = true
-    end
-})
-
 Tab:AddButton({
 	Name = "不死但不完全不死（点紫砂去除）",
 	Callback = function()
-HumanDied = false
-end
+		HumanDied = false
+	end
 })
-
 Tab:AddButton({
 	Name = "跟踪玩家",
 	Callback = function()
@@ -235,7 +118,6 @@ Tab:AddButton({
 loadstring(game:HttpGet(('https://pastefy.ga/zCFEwaYq/raw'),true))()
 	end 
 })
-
 Tab:AddButton({
 	Name = "人物无敌",
 	Callback = function()
@@ -578,20 +460,6 @@ Tab:AddButton({
      loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
   	end    
 })
-
-local Tab = Window:MakeTab({
-  Name = "好玩的",
-  Icon = "rbxassetid://4483345998",
-  PremiumOnly = false
-  })
-
-Tab:AddButton({
-	Name = "非常好玩千万别点",
-	Callback = function()
-game.Players.LocalPlayer:Kick('都说了太好玩了')
-end
-})
-
 local Tab = Window:MakeTab({
     Name = "监狱人生",
     Icon = "rbxassetid://4483345998",
@@ -843,13 +711,6 @@ Tab:AddButton({
 	Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
 	end
 })
-Tab:AddButton({
-	Name = "无限跳",
-	Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
-    end
-})
-
 Tab:AddButton({
       Name = "阿尔宙斯V3.0 UI",
       Callback = function()
@@ -1112,41 +973,7 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({	Name = "公告/添加的脚本",	Icon = "rbxassetid://7734068321",	PremiumOnly = false})
-Tab:AddButton({
-	Name = "缝合！",
-	Callback = function()
-	setclipboard("3543438303")
-end
-})
-Tab:AddButton({
-	Name = "qq",
-	Callback = function()
-	setclipboard("1211373508")
-end
-})
-Tab:AddButton({
-	Name = "公告",
-	Callback = function()
-end
-})
-Tab:AddParagraph("")
-Tab:AddParagraph("！")
-Tab:AddParagraph("")
-Tab:AddParagraph("")
-Tab:AddParagraph("bro")
-Tab:AddParagraph("🥵🥵🥵🥵🥵🥵🥵")
-Tab:AddParagraph("🥵🥵🥵🥵🥵🥵🥵")
-Tab:AddParagraph("🥵🥵🥵🥵🥵🥵🥵")
-Tab:AddButton({
-	Name = "小凌",
-	Callback = function()
-end
-})
-Tab:AddButton({
-	Name = "凌",
-	Callback = function()
-end
-})
+Tab:AddLabel("原作者：小凌")
 Tab:AddButton({
   Name = "doors汉化",
   Callback = function ()
@@ -1291,6 +1118,13 @@ Tab:AddButton({
     loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
   end
 })
-Tab:AddParagraph("你配看吗，你是死全家了是吧")
-Tab:AddParagraph("")
-Tab:AddParagraph("")
+local about = Window:MakeTab({
+    Name = "信息",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+about:AddParagraph("您的用户名:",game.Players.LocalPlayer.Name)
+about:AddParagraph("您的注入器:",identifyexecutor())
+about:AddParagraph("此服务器游戏ID:",game.GameId)
+about:AddParagraph("此服务器位置ID:",game.PlaceId)
+about:AddParagraph("此服务器上的游戏版本:","version_" .. game.PlaceVersion)
