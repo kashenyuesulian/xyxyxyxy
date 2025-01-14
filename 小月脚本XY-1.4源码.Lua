@@ -12,7 +12,7 @@ print("反挂机")
 		   wait(1)
 		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
-local OrionLib = loadstring(game:HttpGet('https://Fuck you
+local OrionLib = loadstring(game:HttpGet("https://github.com/kashenyuesulian/xyxyxyxy/blob/main/%E5%B0%8F%E6%9C%88%E8%84%9A%E6%9C%ACXY-1.4%E6%BA%90%E7%A0%81.Lua"))()
 local Window = OrionLib:MakeWindow({Name = "明月脚本-1.4", HidePremium = false, SaveConfig = true,IntroText = "操你妈    ", ConfigFolder = "操你妈"})
 local about = Window:MakeTab({
     Name = "信息-XL",
